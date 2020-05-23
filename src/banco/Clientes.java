@@ -108,7 +108,7 @@ public class Clientes {
     }
 
     public void saldoMensual(double cantidad) {
-        cantidad = this.mensualidad.getSaldo() / 12;
+        double resultado = this.mensualidad.getSaldo() / 12;
     }
 
 }

@@ -5,9 +5,6 @@
  */
 
 import banco.Clientes;
-import banco.Cuenta;
-import banco.Tarjetas;
-import java.time.LocalDate;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
