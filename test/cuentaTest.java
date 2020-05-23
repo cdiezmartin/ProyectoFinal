@@ -23,4 +23,26 @@ public class cuentaTest {
         assertTrue(c.getSaldo()==3000.75);
         c.setSaldo(3000.75);
     }
+    
+    @Test
+    
+    public void ingresarDinero(){
+        Cuenta c = new Cuenta (3000.75,LocalDate.now());
+        c.ingresarDinero(40.0);
+    }
+    
+    @Test 
+    
+    public void retirarDinero(){
+        Cuenta c = new Cuenta (3000.75,LocalDate.now());
+        assertTrue(c.retirarDinero(50.0));
+    }
+    
+    @Test
+    public void dineroSuficiente(){
+        Cuenta c = new Cuenta (3000.75,LocalDate.now());
+        assertTrue(c.tieneSufiente(3000.75));
+        assertFalse(c.tieneSufiente(3500));
+        
+    }
 }
