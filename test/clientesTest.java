@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-/*
+
 import banco.Clientes;
 import banco.Cuenta;
 import banco.Tarjetas;
@@ -14,33 +14,19 @@ import static org.junit.Assert.*;
 /**
  *
  * @author chris
- *//*
+ */
 public class clientesTest {
 
     @Test
-    
-    public void añadirCuenta(){
-       Clientes c = new Clientes ("","","","",0,0);
-       Cuenta nuevaCuenta = new Cuenta(0,LocalDate.now());
-       c.añadirCuenta(nuevaCuenta);
-       assertEquals(1,c.getCUENTAS().size());
+
+    public void testCliente(){
+        Clientes c = new Clientes ("Christian","Diez Martin","Rio Odiel","50254459B",633089624,19);
+        assertTrue(c.getNombre()=="Christian");
+        assertTrue(c.getApellidos()=="Diez Martin");
+        assertTrue(c.getDireccion()=="Rio Odiel");
+        assertTrue(c.getNif()=="50254459B");
+        assertTrue(c.getTelefono()==633089624);
+        assertTrue(c.getEdad()==19);
+        
     }
-    
-    @Test
-    public void eliminarCuenta(){
-        Clientes c = new Clientes ("","","","",0,0);
-        int indiceCuenta = 0;
-        c.añadirCuenta(new Cuenta(0,LocalDate.now()));
-        assertTrue(c.eliminarCuenta(indiceCuenta));
-        assertFalse(c.eliminarCuenta(0));
-    }
-    
-    @Test
-    public void getTarjetas(){
-        Clientes c = new Clientes ("","","","",0,0);
-        c.añadirTarjeta(new Tarjetas(new Cuenta (0,LocalDate.now())));
-        double resultado1=0;
-        double resultado= c.getTARJETAS().get(0).getCuentaAsociada().getSaldo();
-        assertEquals(resultado1,resultado,0.0);
-    }
-}*/
+}
