@@ -35,4 +35,11 @@ public class clientesTest {
         c.setEdad(19);
         
     }
+    
+    @Test 
+    
+    public void testMensualidad(){
+        Clientes c = new Clientes ("Christian","Diez Martin","Rio Odiel","50254459B",633089624,19);
+        c.saldoMensual(3000);
+    }
 }
