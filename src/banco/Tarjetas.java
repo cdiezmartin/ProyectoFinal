@@ -15,10 +15,9 @@ public class Tarjetas {
     static final int PAGOS_INTERNET = 5000;
     private Cuenta cuentaAsociada;
 
-    public Tarjetas(Cuenta cuentaAsociada) {
-        this.cuentaAsociada = cuentaAsociada;
+    public Tarjetas() {
+        
     }
-
     /**
      * @return the cuentaAsociada
      */
