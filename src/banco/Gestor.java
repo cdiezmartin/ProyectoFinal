@@ -7,8 +7,13 @@ public class Gestor {
     private ArrayList<Cuenta> CUENTAS;
 
     /**
-     * @return the CUENTAS
+     * @param CUENTAS
      */
+
+    public Gestor(ArrayList<Cuenta> CUENTAS) {
+        this.CUENTAS = CUENTAS;
+    }
+
     public ArrayList<Cuenta> getCUENTAS() {
         return CUENTAS;
     }
