@@ -4,58 +4,49 @@ import java.time.LocalDate;
 
 public class Cuenta {
 
-    private int saldo;
-<span class="nc" id="L8">    private int LIMITE=5000;</span>
-    private LocalDate fechaApertura;
+    static final int LIMITE_A_RETIRAR = 1000;
+    private double saldo;
+    private LocalDate fecha_apertura;
 
-<span class="nc" id="L11">    public Cuenta(int saldo, LocalDate fechaApertura) {</span>
+<span class="nc" id="L11">    public Cuenta(double saldo, LocalDate fecha_apertura) {</span>
 <span class="nc" id="L12">        this.saldo = saldo;</span>
-<span class="nc" id="L13">        this.fechaApertura = fechaApertura;</span>
+<span class="nc" id="L13">        this.fecha_apertura = fecha_apertura;</span>
 <span class="nc" id="L14">    }</span>
-    
+
     /**
      * @return the saldo
      */
-    public int getSaldo() {
+    public double getSaldo() {
 <span class="nc" id="L20">        return saldo;</span>
     }
 
     /**
      * @param saldo the saldo to set
      */
-    public void setSaldo(int saldo) {
+    public void setSaldo(double saldo) {
 <span class="nc" id="L27">        this.saldo = saldo;</span>
 <span class="nc" id="L28">    }</span>
 
-    /**
-     * @return the LIMITE
-     */
-    public int getLIMITE() {
-<span class="nc" id="L34">        return LIMITE;</span>
+    public void ingresarDinero(double cantidad) {
+<span class="nc" id="L31">        this.saldo += cantidad;</span>
+<span class="nc" id="L32">    }</span>
+
+    public boolean retirarDinero(double cantidad) {
+<span class="nc" id="L35">        boolean operacion = false;</span>
+<span class="nc bnc" id="L36" title="All 4 branches missed.">        if (cantidad &lt;= LIMITE_A_RETIRAR &amp;&amp; this.tieneSufiente(cantidad)) {</span>
+<span class="nc" id="L37">            this.saldo -= cantidad;</span>
+<span class="nc" id="L38">            operacion = true;</span>
+        }
+<span class="nc" id="L40">        return operacion;</span>
     }
 
-    /**
-     * @param LIMITE the LIMITE to set
-     */
-    public void setLIMITE(int LIMITE) {
-<span class="nc" id="L41">        this.LIMITE = LIMITE;</span>
-<span class="nc" id="L42">    }</span>
-
-    /**
-     * @return the fechaApertura
-     */
-    public LocalDate getFechaApertura() {
-<span class="nc" id="L48">        return fechaApertura;</span>
+    public boolean tieneSufiente(double cantidad) {
+<span class="nc" id="L44">        boolean operacion = true;</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">        if (cantidad &gt; this.saldo) {</span>
+<span class="nc" id="L46">            operacion = false;</span>
+        }
+<span class="nc" id="L48">        return operacion;</span>
     }
 
-    /**
-     * @param fechaApertura the fechaApertura to set
-     */
-    public void setFechaApertura(LocalDate fechaApertura) {
-<span class="nc" id="L55">        this.fechaApertura = fechaApertura;</span>
-<span class="nc" id="L56">    }</span>
-    public void mostrarSaldo(){
-<span class="nc" id="L58">        System.out.println(this.saldo);</span>
-<span class="nc" id="L59">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

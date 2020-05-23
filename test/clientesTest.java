@@ -21,12 +21,18 @@ public class clientesTest {
 
     public void testCliente(){
         Clientes c = new Clientes ("Christian","Diez Martin","Rio Odiel","50254459B",633089624,19);
-        assertTrue(c.getNombre()=="Christian");
-        assertTrue(c.getApellidos()=="Diez Martin");
-        assertTrue(c.getDireccion()=="Rio Odiel");
-        assertTrue(c.getNif()=="50254459B");
+        assertTrue("Christian".equals(c.getNombre()));
+        assertTrue("Diez Martin".equals(c.getApellidos()));
+        assertTrue("Rio Odiel".equals(c.getDireccion()));
+        assertTrue("50254459B".equals(c.getNif()));
         assertTrue(c.getTelefono()==633089624);
         assertTrue(c.getEdad()==19);
+        c.setNombre("Christian");
+        c.setApellidos("Diez Martin");
+        c.setDireccion("Rio Odiel");
+        c.setNif("50254459B");
+        c.setTelefono(633089624);
+        c.setEdad(19);
         
     }
 }

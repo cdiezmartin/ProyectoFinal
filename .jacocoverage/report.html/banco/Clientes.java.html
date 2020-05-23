@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 public class Clientes {
 
-    private ArrayList&lt;Cuenta&gt; CUENTAS;
-    private ArrayList&lt;Tarjetas&gt; TARJETAS;
+    private Cuenta mensualidad;
 
     private String nombre;
     private String apellidos;
@@ -14,156 +13,103 @@ public class Clientes {
     private int telefono;
     private int edad;
 
-<span class="nc" id="L17">    public Clientes(String nombre, String apellidos, String direccion, String nif, int telefono, int edad) {</span>
-<span class="nc" id="L18">        this.nombre = nombre;</span>
-<span class="nc" id="L19">        this.apellidos = apellidos;</span>
-<span class="nc" id="L20">        this.direccion = direccion;</span>
-<span class="nc" id="L21">        this.nif = nif;</span>
-<span class="nc" id="L22">        this.telefono = telefono;</span>
-<span class="nc" id="L23">        this.edad = edad;</span>
-<span class="nc" id="L24">        this.CUENTAS = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L25">        this.TARJETAS = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L26">    }</span>
+<span class="nc" id="L16">    public Clientes(String nombre, String apellidos, String direccion, String nif, int telefono, int edad) {</span>
+<span class="nc" id="L17">        this.nombre = nombre;</span>
+<span class="nc" id="L18">        this.apellidos = apellidos;</span>
+<span class="nc" id="L19">        this.direccion = direccion;</span>
+<span class="nc" id="L20">        this.nif = nif;</span>
+<span class="nc" id="L21">        this.telefono = telefono;</span>
+<span class="nc" id="L22">        this.edad = edad;</span>
+
+<span class="nc" id="L24">    }</span>
 
     /**
      * @return the nombre
      */
     public String getNombre() {
-<span class="nc" id="L32">        return nombre;</span>
+<span class="nc" id="L30">        return nombre;</span>
     }
 
     /**
      * @param nombre the nombre to set
      */
     public void setNombre(String nombre) {
-<span class="nc" id="L39">        this.nombre = nombre;</span>
-<span class="nc" id="L40">    }</span>
+<span class="nc" id="L37">        this.nombre = nombre;</span>
+<span class="nc" id="L38">    }</span>
 
     /**
      * @return the apellidos
      */
     public String getApellidos() {
-<span class="nc" id="L46">        return apellidos;</span>
+<span class="nc" id="L44">        return apellidos;</span>
     }
 
     /**
      * @param apellidos the apellidos to set
      */
     public void setApellidos(String apellidos) {
-<span class="nc" id="L53">        this.apellidos = apellidos;</span>
-<span class="nc" id="L54">    }</span>
+<span class="nc" id="L51">        this.apellidos = apellidos;</span>
+<span class="nc" id="L52">    }</span>
 
     /**
      * @return the direccion
      */
     public String getDireccion() {
-<span class="nc" id="L60">        return direccion;</span>
+<span class="nc" id="L58">        return direccion;</span>
     }
 
     /**
      * @param direccion the direccion to set
      */
     public void setDireccion(String direccion) {
-<span class="nc" id="L67">        this.direccion = direccion;</span>
-<span class="nc" id="L68">    }</span>
+<span class="nc" id="L65">        this.direccion = direccion;</span>
+<span class="nc" id="L66">    }</span>
 
     /**
      * @return the nif
      */
     public String getNif() {
-<span class="nc" id="L74">        return nif;</span>
+<span class="nc" id="L72">        return nif;</span>
     }
 
     /**
      * @param nif the nif to set
      */
     public void setNif(String nif) {
-<span class="nc" id="L81">        this.nif = nif;</span>
-<span class="nc" id="L82">    }</span>
+<span class="nc" id="L79">        this.nif = nif;</span>
+<span class="nc" id="L80">    }</span>
 
     /**
      * @return the telefono
      */
     public int getTelefono() {
-<span class="nc" id="L88">        return telefono;</span>
+<span class="nc" id="L86">        return telefono;</span>
     }
 
     /**
      * @param telefono the telefono to set
      */
     public void setTelefono(int telefono) {
-<span class="nc" id="L95">        this.telefono = telefono;</span>
-<span class="nc" id="L96">    }</span>
+<span class="nc" id="L93">        this.telefono = telefono;</span>
+<span class="nc" id="L94">    }</span>
 
     /**
      * @return the edad
      */
     public int getEdad() {
-<span class="nc" id="L102">        return edad;</span>
+<span class="nc" id="L100">        return edad;</span>
     }
 
     /**
      * @param edad the edad to set
      */
     public void setEdad(int edad) {
-<span class="nc" id="L109">        this.edad = edad;</span>
-<span class="nc" id="L110">    }</span>
+<span class="nc" id="L107">        this.edad = edad;</span>
+<span class="nc" id="L108">    }</span>
 
-    public void añadirCuenta(Cuenta nuevaCuenta) {
-<span class="nc" id="L113">        this.getCUENTAS().add(nuevaCuenta);</span>
-<span class="nc" id="L114">    }</span>
-
-    public boolean eliminarCuenta(int indiceCuenta) {
-
-<span class="nc" id="L118">        boolean eliminada = false;</span>
-
-<span class="nc" id="L120">        this.getCUENTAS().remove(indiceCuenta);</span>
-<span class="nc" id="L121">        eliminada = true;</span>
-<span class="nc" id="L122">        return eliminada;</span>
-
-    }
-    
-    public void añadirTarjeta(Tarjetas nuevaTarjeta) {
-<span class="nc" id="L127">        this.getTARJETAS().add(nuevaTarjeta);</span>
-<span class="nc" id="L128">    }</span>
-    
-    public boolean eliminarTarjeta(int indiceCuenta) {
-
-<span class="nc" id="L132">        boolean eliminada = false;</span>
-
-<span class="nc" id="L134">        this.getCUENTAS().remove(indiceCuenta);</span>
-<span class="nc" id="L135">        eliminada = true;</span>
-<span class="nc" id="L136">        return eliminada;</span>
-
-    }
-
-    /**
-     * @return the CUENTAS
-     */
-    public ArrayList&lt;Cuenta&gt; getCUENTAS() {
-<span class="nc" id="L144">        return CUENTAS;</span>
-    }
-
-    /**
-     * @param CUENTAS the CUENTAS to set
-     */
-    public void setCUENTAS(ArrayList&lt;Cuenta&gt; CUENTAS) {
-<span class="nc" id="L151">        this.CUENTAS = CUENTAS;</span>
-<span class="nc" id="L152">    }</span>
-
-    /**
-     * @return the TARJETAS
-     */
-    public ArrayList&lt;Tarjetas&gt; getTARJETAS() {
-<span class="nc" id="L158">        return TARJETAS;</span>
-    }
-
-    /**
-     * @param TARJETAS the TARJETAS to set
-     */
-    public void setTARJETAS(ArrayList&lt;Tarjetas&gt; TARJETAS) {
-<span class="nc" id="L165">        this.TARJETAS = TARJETAS;</span>
-<span class="nc" id="L166">    }</span>
+    public void saldoMensual(double cantidad) {
+<span class="nc" id="L111">        cantidad = this.mensualidad.getSaldo() / 12;</span>
+<span class="nc" id="L112">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
