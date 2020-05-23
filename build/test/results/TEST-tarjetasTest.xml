@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="LAPTOP-PTKHI8E1" name="tarjetasTest" skipped="0" tests="2" time="0.063" timestamp="2020-05-23T11:02:04">
+<testsuite errors="1" failures="0" hostname="LAPTOP-PTKHI8E1" name="tarjetasTest" skipped="0" tests="2" time="0.047" timestamp="2020-05-23T11:20:22">
   <properties>
     <property name="netbeans.autoupdate.country" value="ES" />
     <property name="nb.wait.for.caches" value="true" />
@@ -39,7 +39,7 @@
     <property name="user.name" value="chris" />
     <property name="copylibs.rebase" value="true" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner tarjetasTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\chris\OneDrive\Escritorio\DAM\PROG\UT8\Banco\build\test\results\TEST-tarjetasTest.xml crashfile=C:\Users\chris\OneDrive\Escritorio\DAM\PROG\UT8\Banco\build\junitvmwatcher4307279527815669028.properties propsfile=C:\Users\chris\OneDrive\Escritorio\DAM\PROG\UT8\Banco\build\junit5990446377635929030.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner tarjetasTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\chris\OneDrive\Escritorio\DAM\PROG\UT8\Banco\build\test\results\TEST-tarjetasTest.xml crashfile=C:\Users\chris\OneDrive\Escritorio\DAM\PROG\UT8\Banco\build\junitvmwatcher5521304617574003730.properties propsfile=C:\Users\chris\OneDrive\Escritorio\DAM\PROG\UT8\Banco\build\junit5763820198828650803.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -311,8 +311,8 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="tarjetasTest" name="testTarjeta" time="0.002" />
-  <testcase classname="tarjetasTest" name="retirarDineroBanco" time="0.003">
+  <testcase classname="tarjetasTest" name="testTarjeta" time="0.0" />
+  <testcase classname="tarjetasTest" name="retirarDineroBanco" time="0.0">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 	at banco.Tarjetas.retirarDineroBanco(Tarjetas.java:30)
 	at tarjetasTest.retirarDineroBanco(tarjetasTest.java:30)

@@ -2,28 +2,33 @@
 
 import java.util.ArrayList;
 
-<span class="nc" id="L5">public class Gestor {</span>
+public class Gestor {
 
     private ArrayList&lt;Cuenta&gt; CUENTAS;
 
     /**
-     * @return the CUENTAS
+     * @param CUENTAS
      */
+
+<span class="nc" id="L13">    public Gestor(ArrayList&lt;Cuenta&gt; CUENTAS) {</span>
+<span class="nc" id="L14">        this.CUENTAS = CUENTAS;</span>
+<span class="nc" id="L15">    }</span>
+
     public ArrayList&lt;Cuenta&gt; getCUENTAS() {
-<span class="nc" id="L13">        return CUENTAS;</span>
+<span class="nc" id="L18">        return CUENTAS;</span>
     }
 
     public void añadirCuenta(Cuenta nuevaCuenta) {
-<span class="nc" id="L17">        this.CUENTAS.add(nuevaCuenta);</span>
-<span class="nc" id="L18">    }</span>
+<span class="nc" id="L22">        this.CUENTAS.add(nuevaCuenta);</span>
+<span class="nc" id="L23">    }</span>
 
     public boolean eliminarCuenta(int numeroCuenta) {
 
-<span class="nc" id="L22">        boolean eliminada = false;</span>
+<span class="nc" id="L27">        boolean eliminada = false;</span>
 
-<span class="nc" id="L24">        this.CUENTAS.remove(numeroCuenta);</span>
-<span class="nc" id="L25">        eliminada = true;</span>
-<span class="nc" id="L26">        return eliminada;</span>
+<span class="nc" id="L29">        this.CUENTAS.remove(numeroCuenta);</span>
+<span class="nc" id="L30">        eliminada = true;</span>
+<span class="nc" id="L31">        return eliminada;</span>
 
     }
 

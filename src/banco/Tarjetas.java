@@ -10,20 +10,35 @@ package banco;
  * @author chris
  */
 public class Tarjetas {
+    
+    /**
+     * Declaracion de atributos
+     */
 
     static final int RETIRADA = 1000;
     static final int PAGOS_INTERNET = 5000;
     private Cuenta cuentaAsociada;
 
+    /**
+     * Creacion del constructor
+     */
+    
     public Tarjetas() {
         
     }
+    
     /**
      * @return the cuentaAsociada
      */
     public Cuenta getCuentaAsociada() {
         return cuentaAsociada;
     }
+    
+    /**
+     * 
+     * @param cantidad
+     * @return 
+     */
 
     public boolean retirarDineroBanco(double cantidad) {
         boolean operacion = false;
@@ -32,6 +47,12 @@ public class Tarjetas {
         }
         return operacion;
     }
+    
+    /**
+     * 
+     * @param cantidad
+     * @return 
+     */
 
     public boolean pagosInternet(double cantidad) {
         boolean operacion = false;

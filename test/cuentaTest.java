@@ -16,6 +16,10 @@ public class cuentaTest {
     
     public cuentaTest() {
     }
+    
+    /**
+     * Test para comprobar metodos constructor y metodos getter y setter
+     */
     @Test
     
     public void testCuenta(){
@@ -24,12 +28,20 @@ public class cuentaTest {
         c.setSaldo(3000.75);
     }
     
+    /**
+     * Test para comprobar el funcionamiento del metodo
+     */
+    
     @Test
     
     public void ingresarDinero(){
         Cuenta c = new Cuenta (3000.75,LocalDate.now());
         c.ingresarDinero(40.0);
     }
+    
+    /**
+     * Test para comprobar el funcionamiento del metodo
+     */
     
     @Test 
     
@@ -38,7 +50,12 @@ public class cuentaTest {
         assertTrue(c.retirarDinero(50.0));
     }
     
+    /**
+     * Test para comprobar el funcionamiento del metodo
+     */
+    
     @Test
+    
     public void dineroSuficiente(){
         Cuenta c = new Cuenta (3000.75,LocalDate.now());
         assertTrue(c.tieneSufiente(3000.75));

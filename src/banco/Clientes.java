@@ -1,8 +1,15 @@
 package banco;
 
-import java.util.ArrayList;
+/**
+ * 
+ * @author chris
+ */
 
 public class Clientes {
+    
+    /**
+     * Declaracion de atributos
+     */
 
     private Cuenta mensualidad;
 
@@ -13,6 +20,16 @@ public class Clientes {
     private int telefono;
     private int edad;
 
+    /**
+     * Creación del constructor
+     * @param nombre
+     * @param apellidos
+     * @param direccion
+     * @param nif
+     * @param telefono
+     * @param edad 
+     */
+    
     public Clientes(String nombre, String apellidos, String direccion, String nif, int telefono, int edad) {
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -106,6 +123,11 @@ public class Clientes {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+    
+    /**
+     * Metodo para ver el saldo mensual
+     * @param cantidad 
+     */
 
     public void saldoMensual(double cantidad) {
         double resultado = this.mensualidad.getSaldo() / 12;

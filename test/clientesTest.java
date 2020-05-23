@@ -14,6 +14,10 @@ import static org.junit.Assert.*;
  */
 public class clientesTest {
 
+    /**
+     * Test para comprobar metodos constructor y metodos getter y setter
+     */
+    
     @Test
 
     public void testCliente(){
@@ -32,6 +36,10 @@ public class clientesTest {
         c.setEdad(19);
         
     }
+    
+    /**
+     * Test para comprobar el funcionamiento de la funcion
+     */
     
     @Test 
     
